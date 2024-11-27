@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Hours Tracker</title>
+  <link rel="stylesheet" href="shared/shared.css">
+  <link rel="stylesheet" href="volunteer.css">
+  <script src="volunteer.js" defer></script>
+</head>
+<body>
+  <!-- Header -->
+  <div id="header">
+    <h1>Community Support Tracker</h1>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navigation">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="donation.html">Donation Tracker</a></li>
+      <li><a href="volunteer.html" class="active">Volunteer Hours</a></li>
+      <li><a href="event.html">Event Signup</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content: Volunteer Hours Form -->
+  <main>
+    <section>
+      <h2>Log Volunteer Hours</h2>
+      <form id="volunteerForm">
+        <div>
+          <label for="charityName">Charity Name:</label>
+          <input type="text" id="charityName" name="charityName" required>
+        </div>
+
+        <div>
+          <label for="hoursVolunteered">Hours Volunteered:</label>
+          <input type="number" id="hoursVolunteered" name="hoursVolunteered" min="1" required>
+        </div>
+
+        <div>
+          <label for="volunteerDate">Date:</label>
+          <input type="date" id="volunteerDate" name="volunteerDate" required>
+        </div>
+
+        <div>
+          <label for="experienceRating">Experience Rating (1-5):</label>
+          <input type="number" id="experienceRating" name="experienceRating" min="1" max="5" required>
+        </div>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="formFeedback" class="feedback"></p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <div id="footer">
+    <p>&copy; 2024 PiXELL River Financial</p>
+  </div>
+</body>
+</html>
