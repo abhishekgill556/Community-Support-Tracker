@@ -36,3 +36,9 @@ document.getElementById('eventForm').addEventListener('submit', function (event)
     // Optionally reset the form
     document.getElementById('eventForm').reset();
 });
+ 
+// Helper function for email validation
+function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+}
