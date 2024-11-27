@@ -19,4 +19,20 @@ document.getElementById('eventForm').addEventListener('submit', function (event)
         feedback.textContent = 'Please enter a valid email address.';
         return;
     }
-} )
+ 
+    // Create a temporary data object
+    const formData = {
+        eventName,
+        representativeName,
+        email,
+        role
+    };
+ 
+    feedback.textContent = `Thank you, ${representativeName}, for signing up for "${eventName}" as a ${role}.`;
+    feedback.style.color = '#2ecc71'; // Green for success
+ 
+    console.log('Form Data:', formData);
+ 
+    // Optionally reset the form
+    document.getElementById('eventForm').reset();
+});
