@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Event Signup</title>
+<link rel="stylesheet" href="shared.css">
+<link rel="stylesheet" href="event.css">
+<script src="event.js" defer></script>
+</head>
+<body>
+
+<div id="header">
+<h1>Community Support Tracker</h1>
+</div>
+<nav id="navigation">
+<ul>
+<li><a href="shared.html">Home</a></li>
+<li><a href="donation.html">Donation Tracker</a></li>
+<li><a href="volunteer.html">Volunteer Hours</a></li>
+<li><a href="event.html" class="active">Event Signup</a></li>
+</ul>
+</nav>
+ 
+<main>
+<h2>Event Signup</h2>
+<form id="eventForm">
+<label for="eventName">Event Name:</label>
+<input type="text" id="eventName" name="eventName" required>
+ 
+            <label for="representativeName">Company Representative's Name:</label>
+<input type="text" id="representativeName" name="representativeName" required>
+ 
+            <label for="email">Representative's Email:</label>
+<input type="email" id="email" name="email" required>
+ 
+            <label for="role">Role Selection:</label>
+<select id="role" name="role" required>
+<option value="" disabled selected>Select a role</option>
+<option value="sponsor">Sponsor</option>
+<option value="participant">Participant</option>
+<option value="organizer">Organizer</option>
+</select>
+ 
+            <button type="submit">Register</button>
+</form>
+<div id="feedback"></div>
+</main>
+ 
+<div id="footer">
+<p>&copy; 2024 PiXELL River Financial</p>
+</div>
+</body>
+</html>
