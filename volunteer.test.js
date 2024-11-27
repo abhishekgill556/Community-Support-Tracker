@@ -2,7 +2,7 @@ const { validateVolunteerForm, displayFeedback } = require('./volunteer');
 
 describe('Volunteer Form Tests', () => {
   beforeEach(() => {
-    // Set up a DOM environment for testing
+    // Set up a minimal DOM environment for testing
     document.body.innerHTML = `
       <div id="formFeedback"></div>
     `;
@@ -41,5 +41,3 @@ describe('Volunteer Form Tests', () => {
     expect(feedbackElement.className).toBe('feedback error');
   });
 });
-
-
