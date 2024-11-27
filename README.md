@@ -21,4 +21,3 @@ The **Community Support Tracker** is a project created to help PiXELL River Fina
 ### Event Signup (By **Sapna Mehta**)
 - Allows users to register for events with details like event name, representative name, email, and role.
 - Ensures inputs are valid and email format is correct.
-- Temporarily stores the registration details.
