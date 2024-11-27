@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Tracker</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="donation.css">
+    <script src="donation.js" defer></script>
+</head>
+<body>
+    <!-- Reusing Shared Header -->
+    <div id="header">
+        <h1>Community Support Tracker</h1>
+    </div>
+
+    <!-- Reusing Shared Navigation -->
+    <nav id="navigation">
+        <ul>
+            <li><a href="shared.html">Home</a></li>
+            <li><a href="donation.html" class="active">Donation Tracker</a></li>
+            <li><a href="volunteer.html">Volunteer Hours</a></li>
+            <li><a href="event.html">Event Signup</a></li>
+        </ul>
+    </nav>
+
+    <!--Donation Tracker Form -->
+    <main>
+        <section>
+            <h2>Add a Donation</h2>
+            <form id="donationForm">
+                <div>
+                    <label for="charityName">Charity Name:</label>
+                    <input type="text" id="charityName" name="charityName" required>
+                </div>
+
+                <div>
+                    <label for="donationAmount">Donation Amount:</label>
+                    <input type="number" id="donationAmount" name="donationAmount" min="1" required>
+                </div>
+
+                <div>
+                    <label for="donationDate">Date of Donation:</label>
+                    <input type="date" id="donationDate" name="donationDate" required>
+                </div>
+
+                <div>
+                    <label for="donorMessage">Donor Message:</label>
+                    <textarea id="donorMessage" name="donorMessage"></textarea>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="formFeedback" class="feedback"></p>
+        </section>
+    </main>
+
+    <!-- Reusing Shared Footer -->
+    <div id="footer">
+        <p>&copy; 2024 PiXELL River Financial</p>
+    </div>
+</body>
+</html>
