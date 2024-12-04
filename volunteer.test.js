@@ -8,6 +8,7 @@ const {
   loadLogs,
   removeLog,
   getLogs,
+  resetForm,
 } = require('./volunteer');
 
 describe('Volunteer Hours Tracker Tests', () => {
@@ -25,7 +26,6 @@ describe('Volunteer Hours Tracker Tests', () => {
               <tbody></tbody>
           </table>
       `;
-
       // Clear localStorage before each test
       localStorage.clear();
   });
@@ -146,6 +146,29 @@ describe('Volunteer Hours Tracker Tests', () => {
 
       const logs = JSON.parse(localStorage.getItem('volunteerLogs'));
       expect(logs.length).toBe(0);
+  });
+
+  test('updateTotalHours updates the total hours display correctly', () => {
+      const totalHoursDisplay = document.getElementById('totalHours');
+      updateTotalHours(totalHoursDisplay, 5);
+      expect(totalHoursDisplay.textContent).toBe('5.0');
+
+      updateTotalHours(totalHoursDisplay, -2);
+      expect(totalHoursDisplay.textContent).toBe('3.0');
+  });
+
+  test('resetForm clears all form fields', () => {
+      document.getElementById('charityName').value = 'Charity Test';
+      document.getElementById('hoursVolunteered').value = '5';
+      document.getElementById('volunteerDate').value = '2024-12-01';
+      document.getElementById('experienceRating').value = '3';
+
+      resetForm();
+
+      expect(document.getElementById('charityName').value).toBe('');
+      expect(document.getElementById('hoursVolunteered').value).toBe('');
+      expect(document.getElementById('volunteerDate').value).toBe('');
+      expect(document.getElementById('experienceRating').value).toBe('');
   });
 });
 
