@@ -31,10 +31,6 @@ nav ul {
     gap: 20px;
 }
 
-nav ul li {
-    margin: 0;
-}
-
 nav ul li a {
     text-decoration: none;
     color: white;
@@ -103,7 +99,6 @@ form input:focus {
     box-shadow: 0 0 8px rgba(0, 74, 173, 0.5);
 }
 
-/* Form Buttons */
 form button {
     align-self: center;
     background: linear-gradient(to right, #004aad, #002e6d);
@@ -169,21 +164,40 @@ form button:active {
     text-align: center;
 }
 
-#summarySection ul {
-    list-style-type: none;
-    margin: 10px 0;
-    padding: 0;
+/* Table Styling */
+#volunteerTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-#summarySection li {
-    background: #ffffff;
-    margin-bottom: 10px;
+#volunteerTable th, #volunteerTable td {
     padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    text-align: center;
+}
+
+#volunteerTable th {
+    background: #004aad;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+#volunteerTable td {
+    border-bottom: 1px solid #ddd;
+    font-size: 0.9rem;
+}
+
+#volunteerTable tr:nth-child(even) {
+    background: #f9fafe;
+}
+
+#volunteerTable tr:hover {
+    background: #eef4ff;
 }
 
 /* Delete Button */
@@ -218,3 +232,4 @@ footer {
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
+
