@@ -200,25 +200,26 @@ form button:active {
     background: #eef4ff;
 }
 
-/* Delete Button */
+/* Delete Button Styling */
 .delete-button {
     background-color: #e74c3c;
     color: white;
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
-    cursor: pointer;
     font-size: 0.9rem;
-    transition: background 0.3s, transform 0.2s;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .delete-button:hover {
     background-color: #c0392b;
-    transform: scale(1.1);
+    transform: translateY(-2px);
 }
 
 .delete-button:active {
-    transform: scale(0.95);
+    transform: translateY(2px);
 }
 
 /* Footer */

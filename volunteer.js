@@ -83,11 +83,11 @@ function createTableRow(log) {
         <td>${log.hoursVolunteered}</td>
         <td>${log.volunteerDate}</td>
         <td>${log.experienceRating}</td>
-        <td><button class="delete-btn">Delete</button></td>
+        <td><button class="delete-button">Delete</button></td>
     `;
 
     // Attach delete functionality
-    const deleteButton = row.querySelector('.delete-btn');
+    const deleteButton = row.querySelector('.delete-button');
     deleteButton.addEventListener('click', () => handleDelete(row, log));
     return row;
 }
@@ -107,7 +107,7 @@ function handleDelete(row, log) {
 function updateTotalHours(display, hours) {
     const currentTotal = parseFloat(display.textContent) || 0;
     const newTotal = currentTotal + hours;
-    display.textContent = newTotal.toFixed(1); 
+    display.textContent = newTotal.toFixed(1);
 }
 
 /**
