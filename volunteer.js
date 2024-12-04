@@ -106,7 +106,8 @@ function handleDelete(row, log) {
  */
 function updateTotalHours(display, hours) {
     const currentTotal = parseFloat(display.textContent) || 0;
-    display.textContent = (currentTotal + hours).toFixed(1);
+    const newTotal = currentTotal + hours;
+    display.textContent = newTotal.toFixed(1); 
 }
 
 /**
@@ -130,7 +131,8 @@ function loadLogs(tableBody, totalHoursDisplay) {
  * Remove a log from localStorage.
  */
 function removeLog(logToRemove) {
-    const logs = getLogs().filter((log) => {
+    const logs = getLogs();
+    const updatedLogs = logs.filter((log) => {
         return (
             log.charityName !== logToRemove.charityName ||
             log.volunteerDate !== logToRemove.volunteerDate
@@ -187,6 +189,6 @@ module.exports = {
     saveLog,
     loadLogs,
     getLogs,
-    showFeedback,
+    resetForm,
 };
 
