@@ -29,12 +29,12 @@
       <form id="volunteerForm">
         <div>
           <label for="charityName">Charity Name:</label>
-          <input type="text" id="charityName" name="charityName">
+          <input type="text" id="charityName" name="charityName" placeholder="e.g., Red Cross">
         </div>
 
         <div>
           <label for="hoursVolunteered">Hours Volunteered:</label>
-          <input type="number" id="hoursVolunteered" name="hoursVolunteered" min="1">
+          <input type="number" id="hoursVolunteered" name="hoursVolunteered" min="1" placeholder="e.g., 5">
         </div>
 
         <div>
@@ -44,7 +44,7 @@
 
         <div>
           <label for="experienceRating">Experience Rating (1-5):</label>
-          <input type="number" id="experienceRating" name="experienceRating" min="1" max="5">
+          <input type="number" id="experienceRating" name="experienceRating" min="1" max="5" placeholder="e.g., 4">
         </div>
 
         <button type="submit">Submit</button>
@@ -55,8 +55,27 @@
     <!-- Summary Section -->
     <section id="summarySection">
       <h2>Summary</h2>
+      <div>
+        <label for="filterCharity">Filter by Charity:</label>
+        <select id="filterCharity">
+          <option value="">All Charities</option>
+        </select>
+      </div>
       <p>Total Hours Volunteered: <span id="totalHours">0</span></p>
-      <ul id="logList"></ul>
+      <table id="volunteerTable">
+        <thead>
+          <tr>
+            <th>Charity Name</th>
+            <th>Hours Volunteered</th>
+            <th>Date</th>
+            <th>Experience Rating</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Table rows will be dynamically added here -->
+        </tbody>
+      </table>
     </section>
   </main>
 

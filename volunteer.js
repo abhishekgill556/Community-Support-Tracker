@@ -139,7 +139,6 @@ function removeLog(logToRemove) {
   });
   localStorage.setItem('volunteerLogs', JSON.stringify(updatedLogs)); 
 }
-
 /**
  * Get all logs from localStorage.
  */
