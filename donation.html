@@ -9,7 +9,7 @@
     <script src="donation.js" defer></script>
 </head>
 <body>
-    <!-- Reusing Shared Header -->
+    <!-- Shared Header -->
     <header id="header">
         Community Support Tracker
     </header>
@@ -22,31 +22,33 @@
         </ul>
     </nav>
    
-    <!-- Donation Tracker Form -->
+    <!-- Main Content -->
     <main>
-        <section>
+        <!-- Add Donation Form Section -->
+        <section id="donationFormSection">
             <h2>Add a Donation</h2>
             <form id="donationForm">
-                <div>
+                <div class="form-group">
                     <label for="charityName">Charity Name:</label>
-                    <input type="text" id="charityName" name="charityName" required>
+                    <input type="text" id="charityName" name="charityName" placeholder="Enter Charity Name" required>
                 </div>
  
-                <div>
+                <div class="form-group">
                     <label for="donationAmount">Donation Amount:</label>
-                    <input type="number" id="donationAmount" name="donationAmount" min="1" required>
+                    <input type="number" id="donationAmount" name="donationAmount" min="1" placeholder="Enter Amount" required>
                 </div>
  
-                <div>
+                <div class="form-group">
                     <label for="donationDate">Date of Donation:</label>
                     <input type="date" id="donationDate" name="donationDate" required>
                 </div>
-                <div>
+ 
+                <div class="form-group">
                     <label for="donorMessage">Donor Message:</label>
-                    <textarea id="donorMessage" name="donorMessage"></textarea>
+                    <textarea id="donorMessage" name="donorMessage" placeholder="Write a message..."></textarea>
                 </div>
  
-                <button type="submit">Submit</button>
+                <button type="submit" class="submit-btn">Submit</button>
             </form>
             <p id="formFeedback" class="feedback"></p>
         </section>
@@ -54,7 +56,7 @@
         <!-- Donation Summary Section -->
         <section id="summarySection">
             <h2>Donation Summary</h2>
-            <p>Total Donations: $<span id="totalDonations">0</span></p>
+            <p>Total Donations: $<span id="totalDonations">0.00</span></p>
             <table id="donationTable">
                 <thead>
                     <tr>
@@ -72,7 +74,7 @@
         </section>
     </main>
  
-    <!-- Reusing Shared Footer -->
+    <!-- Shared Footer -->
     <footer>
         <div>
             <p>&copy; 2024 PiXELL River Financial</p>
