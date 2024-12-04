@@ -20,7 +20,7 @@
             <li><a href="event.html">Event Signup</a></li>
         </ul>
     </nav>
-
+ 
     <main>
         <h2>Event Signup</h2>
         <form id="eventForm">
@@ -28,17 +28,17 @@
                 <label for="eventName">Event Name:</label>
                 <input type="text" id="eventName" name="eventName" required>
             </div>
-
+ 
             <div>
                 <label for="representativeName">Representative's Name:</label>
                 <input type="text" id="representativeName" name="representativeName" required>
             </div>
-
+ 
             <div>
                 <label for="email">Representative's Email:</label>
                 <input type="email" id="email" name="email" required>
             </div>
-
+ 
             <div>
                 <label for="role">Role Selection:</label>
                 <select id="role" name="role" required>
@@ -48,17 +48,30 @@
                     <option value="organizer">Organizer</option>
                 </select>
             </div>
-
+ 
             <button type="submit">Register</button>
         </form>
         <div id="feedback"></div>
-
+ 
         <section id="participantsSection">
             <h2>Registered Participants</h2>
-            <ul id="participantList"></ul>
+            <table id="participantTable">
+                <thead>
+                    <tr>
+                        <th>Event Name</th>
+                        <th>Representative's Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                
+                </tbody>
+            </table>
         </section>
     </main>
-
+ 
     <footer>
         <div>
             <p>&copy; 2024 PiXELL River Financial</p>
