@@ -130,13 +130,14 @@ function loadLogs(tableBody, totalHoursDisplay) {
  * Remove a log from localStorage.
  */
 function removeLog(logToRemove) {
-    const logs = getLogs().filter((log) => {
-        return (
-            log.charityName !== logToRemove.charityName ||
-            log.volunteerDate !== logToRemove.volunteerDate
-        );
-    });
-    localStorage.setItem('volunteerLogs', JSON.stringify(updatedLogs));
+  const logs = getLogs();
+  const updatedLogs = logs.filter((log) => {
+      return (
+          log.charityName !== logToRemove.charityName ||
+          log.volunteerDate !== logToRemove.volunteerDate
+      );
+  });
+  localStorage.setItem('volunteerLogs', JSON.stringify(updatedLogs)); 
 }
 
 /**

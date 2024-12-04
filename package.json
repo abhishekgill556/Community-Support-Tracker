@@ -1,13 +1,13 @@
 {
   "name": "final_project",
   "version": "1.0.0",
-  "description": "Member-1\r Member-2\r Member-3",
+  "description": "A collaborative project by Abhishek Gill, Ramandeep, and Sapna Mehta to build a Community Support Tracker.",
   "main": "index.js",
   "scripts": {
     "test": "jest"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["community", "volunteer", "tracker", "web-app"],
+  "author": "Abhishek Gill, Ramandeep, Sapna Mehta",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0",

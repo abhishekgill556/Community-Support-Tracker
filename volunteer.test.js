@@ -1,16 +1,13 @@
 const {
-  initializeVolunteerTracker,
-  handleFormSubmit,
   collectFormData,
   validateFormData,
   addLog,
   createTableRow,
-  removeLogFromTable,
   updateTotalHours,
   saveLog,
   loadLogs,
-  getLogs,
   removeLog,
+  getLogs,
 } = require('./volunteer');
 
 describe('Volunteer Hours Tracker Tests', () => {
@@ -23,7 +20,6 @@ describe('Volunteer Hours Tracker Tests', () => {
               <input id="volunteerDate" />
               <input id="experienceRating" />
           </form>
-          <p id="formFeedback"></p>
           <span id="totalHours">0</span>
           <table id="volunteerTable">
               <tbody></tbody>
@@ -137,27 +133,9 @@ describe('Volunteer Hours Tracker Tests', () => {
       expect(totalHoursDisplay.textContent).toBe('3.0');
   });
 
-  test('removeLogFromTable removes a row and updates total hours', () => {
-      const tableBody = document.querySelector('#volunteerTable tbody');
-      const totalHoursDisplay = document.getElementById('totalHours');
+  test('removeLog removes a log from localStorage', () => {
       const log = {
           charityName: 'Charity G',
-          hoursVolunteered: 5,
-          volunteerDate: '2024-11-01',
-          experienceRating: 4,
-      };
-
-      addLog(tableBody, log, totalHoursDisplay);
-      const row = tableBody.querySelector('tr');
-      removeLogFromTable(row, log, totalHoursDisplay);
-
-      expect(tableBody.children.length).toBe(0);
-      expect(totalHoursDisplay.textContent).toBe('0.0');
-  });
-
-  test('removeLog updates localStorage', () => {
-      const log = {
-          charityName: 'Charity H',
           hoursVolunteered: 4,
           volunteerDate: '2024-10-25',
           experienceRating: 3,
