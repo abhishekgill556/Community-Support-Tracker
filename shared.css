@@ -1,65 +1,155 @@
+/* Shared style */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Inter', sans-serif; /* Modern font for better readability */
+    background: #f4f7fc; /* Light and clean background color */
+    color: #2c3e50; /* Slightly muted dark gray for text */
+    line-height: 1.8;
+    font-size: 16px; /* Base font size for consistent scaling */
+}
+
 /* Header Styling */
 #header {
-    text-align: center;
-    background-color: #3498db;
-    color: white;
-    padding: 15px;
-    font-family: 'Arial', sans-serif;
-    font-size: 1.5rem;
-}
-
-/* Navigation Menu Styling */
-#navigation ul {
-    list-style: none;
     display: flex;
     justify-content: center;
-    background-color: #2ecc71;
-    padding: 10px 0;
-    margin: 0;
-}
-
-#navigation li {
-    margin: 0 15px;
-}
-
-#navigation a {
-    text-decoration: none;
+    align-items: center;
+    background: #004aad; /* Deep blue background */
     color: white;
-    font-weight: bold;
-    font-size: 1rem;
-    position: relative;
-    display: inline-block;
-    transition: transform 0.3s ease, color 0.3s ease;
+    padding: 20px 10px;
+    font-size: 2.5rem; /* Ensures consistent header size */
+    font-weight: 700;
+    text-transform: uppercase; /* Capitalizes text */
+    border-bottom: 4px solid #002e6d; /* Adds subtle depth */
+    letter-spacing: 0.05rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds professionalism */
 }
 
-#navigation a:hover {
-    color: #d4f1d0;
-    transform: translateY(-5px);
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: center; /* Centers the menu items horizontally */
+    align-items: center;
+    background: #004aad;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none; /* Removes bullets */
+    display: flex; /* Makes the list horizontal */
+    gap: 20px; /* Adds space between menu items */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Inline items for a horizontal look */
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 10px 15px;
+    font-weight: 500;
+    position: relative; /* For pseudo-elements */
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a::before {
+    content: ''; /* Creates the hover effect below the link */
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Modern gradient effect */
+    transform: scaleX(0); /* Hidden initially */
+    transform-origin: left;
+    transition: transform 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before {
+    transform: scaleX(1); /* Expands the gradient effect */
+}
+
+nav ul li a:hover {
+    color: #00c6ff; /* Subtle color change on hover */
+}
+
+/* Main Section Styling */
+main {
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle depth */
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.8;
+}
+
+/* Welcome Section */
+#welcome {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 800px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#welcome h1 {
+    font-size: 2.5rem;
+    color: #004aad;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+#welcome p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+#welcome ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+#welcome ul li {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #2c3e50;
 }
 
 /* Footer Styling */
-#footer {
+footer {
+    background: #002e6d; /* Consistent dark blue footer */
+    color: white;
+    padding: 25px;
     text-align: center;
-    margin-top: 30px;
-    padding: 10px;
     font-size: 0.9rem;
-    color: #7f8c8d;
-    background-color: #ecf0f1;
+    margin-top: 40px; /* Adds space before the footer */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle elevation for the footer */
 }
 
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-    #navigation ul {
-        flex-direction: column; 
-        padding: 0;
-    }
+footer div {
+    margin: 0 auto;
+    max-width: 1200px;
+}
 
-    #navigation li {
-        margin: 10px 0; 
-    }
-
-    #header {
-        font-size: 1.2rem;
-        padding: 10px;
-    }
+footer p {
+    margin: 5px 0;
+    font-size: 0.9rem;
 }
